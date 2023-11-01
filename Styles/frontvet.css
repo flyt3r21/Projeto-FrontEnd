@@ -6,7 +6,7 @@
    justify-content: space-around;
 }
 
-.beauty {
+.cards {
    width: 40%;
    text-align: center;
 
@@ -14,19 +14,7 @@
    border-radius: 20px;
 }
 
-.beauty img {
-   width: 100%;
-}
-
-.health {
-   width: 40%;
-   text-align: center;
-
-   background-color: #9ccbda;
-   border-radius: 20px;
-}
-
-.health img {
+.cards img {
    width: 100%;
 }
 
@@ -41,3 +29,4 @@ main p {
    padding: 10px;
    font-weight: 550;
 }
+

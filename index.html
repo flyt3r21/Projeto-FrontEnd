@@ -25,7 +25,11 @@
       </nav>
     </header>
 
-    <nav class="menuCel">
+    <div class="menuIcon" onclick="dropdown()">
+      <img src="img/menuIcon.svg" alt="" class="imagem menu hamburguer">
+  </div>
+
+    <nav id="menuCel">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="Pages/login.html">Login</a></li>
@@ -35,14 +39,14 @@
 
     <main>
       <div class="boxservicos">
-        <section class="beauty">
+        <section class="cards">
           <h2>Hora do banho!</h2>
           <div class="beautyimg">
             <img src="img/banho dog amarelo.png" alt="" />
             <p>Em breve uma seção exclusiva para você agendar o banho do seu melhor amigo!</p>
           </div>
         </section>
-        <section class="health">
+        <section class="cards">
           <h2>Saúde e bem estar!</h2>
           <div class="beautyimg">
             <img src="img/gato-vet.jpg" alt="" />
@@ -51,7 +55,7 @@
         </section>
       </div>
       <div class="bernesse">
-        <img src="img/bernesse-removebg-preview.png" alt="">
+        <img src="img/bernesse-removebg-preview.png" alt="cachorro bernesse">
       </div>
 
       <div class="redes">
@@ -65,7 +69,20 @@
     <footer>
       <p>@2023 Todos os direitos reservados</p>
     </footer>
+
+    
   </div>
+
+  <script>
+    function dropdown() {
+        if(menuCel.style.display == "flex"){
+          menuCel.style.display = "none"
+        }else{
+          menuCel.style.display = "flex"
+        }
+    }
+</script>
+
 </body>
 
 </html>
