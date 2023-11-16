@@ -19,8 +19,9 @@
 }
 
 h2 {
-   margin: 30px 0px;
-   color: #015a06;
+   margin: 30px 0px !important;
+   color: #015a06 !important;
+   font-family: sans-serif;
 }
 
 main p {
