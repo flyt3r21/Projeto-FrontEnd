@@ -25,6 +25,20 @@
          </nav>
        </header>
 
+       <div class="menuIcon" onclick="dropdown()">
+        <img src="../img/menuIcon.svg" alt="" class="imagem menu hamburguer">
+      </div>
+  
+      <nav id="menuCel">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../Pages/login.html">Login</a></li>
+          <li><a href="../Pages/cadastro.html">Cadastre-se</a></li>
+          <li><a href="../Pages/catalogo.html">Catálogo de produtos</a></li>
+          <li><a href="../Pages/sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+
        <main>
          <section id="cartasProdutos" class="d-flex gap-5 justify-content-center m-1 flex-wrap">
             <!-- Casinha card -->
@@ -186,6 +200,16 @@
        </footer>
       
    </div>
+
+   <script>
+    function dropdown() {
+      if (menuCel.style.display == "flex") {
+        menuCel.style.display = "none"
+      } else {
+        menuCel.style.display = "flex"
+      }
+    }
+  </script>
 
 
 

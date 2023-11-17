@@ -26,6 +26,20 @@
     </nav>
   </header>
 
+  <div class="menuIcon" onclick="dropdown()">
+    <img src="../img/menuIcon.svg" alt="" class="imagem menu hamburguer">
+  </div>
+
+  <nav id="menuCel">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Pages/login.html">Login</a></li>
+      <li><a href="../Pages/cadastro.html">Cadastre-se</a></li>
+      <li><a href="../Pages/catalogo.html">Catálogo de produtos</a></li>
+      <li><a href="../Pages/sobre.html">Sobre</a></li>
+    </ul>
+  </nav>
+
   <main>
 
     <section class="janela">
@@ -79,6 +93,16 @@
   <footer>
     <p>@2023 Todos os direitos reservados</p>
   </footer>
+
+  <script>
+    function dropdown() {
+      if (menuCel.style.display == "flex") {
+        menuCel.style.display = "none"
+      } else {
+        menuCel.style.display = "flex"
+      }
+    }
+  </script>
 </body>
 
 </html>
