@@ -57,24 +57,48 @@ nav ul li a:hover:after {
 }
 
 #sobreTexto {
-   width: 50%;
+   width: 40%;
 }
 
 #sobreCarrocel {
-   
+   width: 40%;
 }
+
+.card {
+   background-image: linear-gradient(to bottom, #9ccbdaab 50%, #b5ebec8c);
+   font-family: sans-serif;
+   text-align: justify;
+}
+
+.card h2 {
+   color: #015a06;
+   font-weight: bold;
+}
+
 
 footer {
    line-height: 4rem;
    height: 4rem;
    width: 100%;
-   position: absolute;
-   bottom: 0;
-   left: 0;
    text-transform: uppercase;
    text-align: center;
    font-weight: 600;
    color: #015a06;
    font-family: sans-serif;
    background-image: linear-gradient(to bottom, #9ccadace 50%, #b5ebec8c);
+}
+
+@media screen and (max-width: 1200px){
+   #sobreSecao {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+}
+
+@media screen and (min-width: 1200px){
+   footer {
+      position: fixed;
+      bottom: 0px;
+   }
 }

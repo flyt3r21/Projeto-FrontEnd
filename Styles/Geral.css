@@ -26,7 +26,7 @@ html {
    height: 100%;
    background-image: linear-gradient(#61a2ba 60%, #80aebe, #9cc9da);
    clip-path: circle(40% at right 900px);
-
+   z-index: 1;
 }
 
 .bernesse {
@@ -34,7 +34,7 @@ html {
    position: absolute;
    right: 250px;
    bottom: 0px;
-   z-index: 1;
+   z-index: 2;
 }
 
 header {
@@ -84,7 +84,7 @@ nav ul li a:hover:after {
 }
 
 .redes {
-   z-index: 1;
+   z-index: 2;
    display: flex;
    flex-direction: column;
    position: absolute;
@@ -98,15 +98,16 @@ nav ul li a:hover:after {
 }
 
 footer {
+   line-height: 4rem;
+   height: 4rem;
    width: 100%;
-   position: absolute;
-   bottom: 0;
-   left: 0;
    text-transform: uppercase;
    text-align: center;
    font-weight: 600;
    color: #3f6c7c;
    font-family: sans-serif;
+   background-image: linear-gradient(to bottom, #9ccadace 50%, #b5ebec8c);
+   color: #015a06;
 }
 
 #menuCel{
@@ -132,6 +133,10 @@ footer {
       display: flex;
       justify-content: center;
    }
+   .boxservicos{
+      flex-direction: column;
+      justify-content: center;
+   }
 }
 
 @media screen and (max-width: 650px){
@@ -143,6 +148,13 @@ footer {
 @media screen and (max-width: 650px){
    .menuIcon{
       display: flex;
+   }
+}
+
+@media screen and (min-width: 700px){
+   footer{
+      position: fixed;
+      bottom: 0;
    }
 }
    
