@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="./Styles/frontvet.css">
   <link rel="stylesheet" href="./Styles/Geral.css">
   <link rel="shortcut icon" href="img/favicon_front_vet-removebg-preview.png" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
 
@@ -32,7 +33,7 @@
 
     <div class="menuIcon" onclick="dropdown()">
       <img src="img/menuIcon.svg" alt="" class="imagem menu hamburguer">
-  </div>
+    </div>
 
     <nav id="menuCel">
       <ul>
@@ -44,20 +45,90 @@
 
     <main>
       <div class="boxservicos">
+        <!-- card banho e tosa -->
         <section class="cards">
           <h2>Hora do banho!</h2>
           <div class="beautyimg">
             <img src="img/banho dog amarelo.png" alt="" />
             <p>Em breve uma seção exclusiva para você agendar o banho do seu melhor amigo!</p>
+            <button style="background-color: #015a06;" type="button" class="btn btn-primary m-1 icon-link-hover " data-bs-toggle="modal" data-bs-target="#botaoBanho">
+              Agendar
+            </button>
           </div>
         </section>
+        <!-- card saúde -->
         <section class="cards">
           <h2>Saúde e bem estar!</h2>
           <div class="beautyimg">
             <img src="img/gato-vet.jpg" alt="" />
           </div>
           <p>Conheça os nossos planos e instalações de atendimento clínico e cirúrgico!</p>
+          <button style="background-color: #015a06;" type="button" class="btn btn-primary m-1 " data-bs-toggle="modal" data-bs-target="#botaoSaude">
+            Agendar
+          </button>
         </section>
+      </div>
+      <!-- Modal banho e tosa-->
+      <div class="modal fade" id="botaoBanho" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Agende o horário do banho e tosa</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div>
+                <form class="d-flex flex-column gap-1">
+                  <label for="especie">Qual a espécie?</label>
+                  <select name="select" id="especie">
+                    <option value="gato">Felina</option>
+                    <option value="cao">Canina</option>
+                  </select>
+                  <label for="diaBanho">Escolha o dia do banho</label>
+                  <input type="date" id="diaBanho">
+                  <label for="horaBanho">Escolha o horário do banho</label>
+                  <input type="time" id="horaBanho">
+                  <p class="text-danger">Aguarde o contato para checar a disponibilidade!</p>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button style="background-color: #015a06;" type="button" class="btn btn-primary">Agendar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal saúde -->
+      <div class="modal fade" id="botaoSaude" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Escolha a data e horário da consulta!</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div>
+                <form class="d-flex flex-column gap-1">
+                  <label for="especie">Qual a espécie?</label>
+                  <select name="select" id="especie">
+                    <option value="gato">Felina</option>
+                    <option value="cao">Canina</option>
+                  </select>
+                  <label for="diaSaude">Escolha o dia da consulta</label>
+                  <input type="date" id="diaSaude">
+                  <label for="horaSaude">Escolha o horário da consulta</label>
+                  <input type="time" id="horaSaude">
+                  <p class="text-danger">Aguarde o contato para checar a disponibilidade!</p>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button style="background-color: #015a06;" type="button" class="btn btn-primary">Agendar</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="bernesse">
         <img src="img/bernesse-removebg-preview.png" alt="cachorro bernesse">
@@ -75,23 +146,29 @@
       <p>@2023 Todos os direitos reservados</p>
     </footer>
 
-    
+
   </div>
 
   <script>
     function dropdown() {
-        if(menuCel.style.display == "flex"){
-          menuCel.style.display = "none"
-        }else{
-          menuCel.style.display = "flex"
-        }
+      if (menuCel.style.display == "flex") {
+        menuCel.style.display = "none"
+      } else {
+        menuCel.style.display = "flex"
+      }
     }
-</script>
+  </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
