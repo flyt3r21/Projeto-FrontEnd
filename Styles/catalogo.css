@@ -99,6 +99,15 @@ footer {
    background-image: linear-gradient(to bottom, #9ccadace 50%, #b5ebec8c);
 }
 
+#menuCel{
+   display: none;
+}
+
+.menuIcon{
+  cursor: pointer;
+  display: none;
+}
+
 @media screen and (max-width: 1200px){
    #sobreSecao {
       display: flex;
@@ -111,5 +120,17 @@ footer {
    footer {
       position: fixed;
       bottom: 0px;
+   }
+}
+
+@media screen and (max-width: 768px){
+   .menuPc{
+      display: none;
+   }
+}
+
+@media screen and (max-width: 768px){
+   .menuIcon{
+      display: flex;
    }
 }
