@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Styles/carrinho.css">
+    <link rel="shortcut icon" href="../img/favicon_front_vet-removebg-preview.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="page">
+        <header>
+            <div class="logo">
+                <a href="../index.html"><img src="../img/logo_front_vet-removebg-preview.png"
+                        alt="logo front vet" /></a>
+            </div>
+            <nav class="menuPc">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../Pages/login.html">Login</a></li>
+                    <li><a href="../Pages/cadastro.html">Cadastre-se</a></li>
+                    <li><a href="../Pages/catalogo.html">Catálogo</a></li>
+                    <li><a href="../Pages/sobre.html">Sobre</a></li>
+                    <li><a href="../Pages/carrinho.html">Carrinho</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="menuIcon" onclick="dropdown()">
+            <img src="../img/menuIcon.svg" alt="" class="imagem menu hamburguer">
+        </div>
+
+        <nav id="menuCel">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Pages/login.html">Login</a></li>
+                <li><a href="../Pages/cadastro.html">Cadastre-se</a></li>
+                <li><a href="../Pages/catalogo.html">Catálogo</a></li>
+                <li><a href="../Pages/sobre.html">Sobre</a></li>
+                <li><a href="../Pages/carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div id="cardProdutos" class="mx-auto">
+                <!-- card casinha -->
+                <div id="casa" class="card" style="width: 18rem;">
+                    <img src="../img/casinha de cachorro.png" class="card-img-top" alt="casinha de cachorro vermelha">
+                    <div class="card-body">
+                        <h5 class="card-title text-center fw-bold">Casinha de cachorro</h5>
+                        <p class="card-text mb-5">Paredes madeira de pínus(Pinheiro Americano) 1cm de espessura, pintura
+                            emborrachada, exceto o verniz.
+                            Estrutura madeira pínus 2,5cm espessura
+                            Assoalho madeira pínus 1cm espessura, pintada na cor chumbo
+                            Telhado 100% ecológico.</p>
+                    </div>
+                </div>
+                <!-- Card coleira -->
+                <div id="coleira" class="card" style="width: 18rem;">
+                    <img src="../img/coleira verde.jfif" class="card-img-top" alt="coleira verde">
+                    <div class="card-body">
+                        <h5 class="card-title text-center fw-bold">Coleira Peitoral</h5>
+                        <p class="card-text">A coleira personalizada número 1 da FrontVet. Ela é básica e possui
+                            combinações de cores que encantam à todos. É uma coleira leve, forte, em couro legítimo e
+                            feita para durar!</p>
+                    </div>
+                </div>
+                <!-- Card Brinquedo -->
+                <div id="brinquedo" class="card" style="width: 18rem;">
+                    <img src="../img/brinquedos para cachorro.jfif" class="card-img-top" alt="Brinquedos dog">
+                    <div class="card-body">
+                        <h5 class="card-title text-center fw-bold">Brinquedo</h5>
+                        <p class="card-text">Brinquedos são muito importantes para o desenvolvimento cognitivo e
+                            entretenimento do seu amiguinho. Nossos brinquedos são fabricados em material super
+                            resistente e atóxico! </p>
+                    </div>
+                </div>
+                <!-- Card Ração -->
+                <div id="racao" class="card" style="width: 18rem;">
+                    <img src="../img/ração golden senior.jpg" class="card-img-top" alt="Brinquedos dog">
+                    <div class="card-body">
+                        <h5 class="card-title text-center fw-bold">Alimentação</h5>
+                        <p class="card-text">A escolha de uma boa alimentação é um fator determinante para o
+                            desenvolvimento e manutenção da saúde do seu amigo. Aqui você esncontra as melhores opções
+                            do mercado! </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="buyBotoes">
+                <div id="btnProdutos">
+                    <button id="btnCasinha" type="button">Casinha</button>
+                    <button id="btnColeira" type="button">Coleira</button>
+                    <button id="btnBrinquedo" type="button">Brinquedo</button>
+                    <button id="btnRacao" type="button">Ração</button>
+                </div>
+                <div id="finalCompras">
+                    <button id="btnFinal" type="button">Finalizar Compra</button>
+                    <a href="catalogo.html"><button id="btnCont" type="button">Continuar comprando</button></a>
+                </div>
+            </div>
+        </main>
+
+        <footer id="rodape">
+            <p>@2023 Todos os direitos reservados</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function dropdown() {
+            if (menuCel.style.display == "flex") {
+                menuCel.style.display = "none"
+            } else {
+                menuCel.style.display = "flex"
+            }
+        }
+    </script>
+
+
+    <script src="../JS/jquery-3.7.1.js"></script>
+    <script src="../JS/script.js"></script>
+</body>
+
+</html>
