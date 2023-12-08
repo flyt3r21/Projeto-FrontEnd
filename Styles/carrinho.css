@@ -25,6 +25,10 @@
     align-items: center;
     background-image: linear-gradient(to bottom, #9ccadace 50%, #b5ebec8c);
  }
+
+ .logo {
+   margin-left: 50px;
+}
  
  nav ul {
     display: flex;
@@ -61,6 +65,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 5px;
+    margin-top: 5px;
  }
 
  #casa {
@@ -169,3 +175,63 @@
        display: flex;
     }
  }
+
+ /* CSS para o pre carregamento */
+.preloader  {
+   background-image: linear-gradient(to bottom, #9ccbda 50%, #b5ebec);
+	position: fixed;
+	top: 0;
+	left: 0;
+	animation: spinz 1.35s ease-in-out infinite;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+  }
+  
+  .loader {
+	border: 16px solid #efeee8;
+	border-top: 16px solid #015a06; 
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 1.35s linear infinite;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -60px;
+	margin-left: -60px;
+  }
+
+  @keyframes spin {
+	0% {
+	  transform: rotate(0deg);
+	  opacity:1;
+	}
+	50% {
+	  transform: rotate(360deg);
+	  opacity:1;
+	}
+	75% {
+	  opacity:1;
+	  transform: rotate(180deg);
+	}
+	100% {
+	  transform: rotate(0deg);
+	  opacity:0;
+	}
+  }
+  
+  @keyframes spinz {
+	0% {
+	  opacity:1;
+	}
+	50% {
+	  opacity:1;
+	}
+	75% {
+	  opacity:1;
+	}
+	100% {
+	  opacity:0;
+	}
+  }

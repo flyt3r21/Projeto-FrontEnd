@@ -14,7 +14,12 @@
 </head>
 
 <body>
-  <div id="page">
+
+  <div class="preloader" id="preloader">
+    <div class="loader" id="loader"></div>
+</div>
+
+  <div id="page" >
     <header>
       <div class="logo">
         <a href="index.html"><img src="../img/logo_front_vet-removebg-preview.png" alt="logo front vet" /></a>
@@ -51,15 +56,18 @@
       <div class="boxservicos">
         <!-- card banho e tosa -->
         <section class="cards">
-          <h2>Hora do banho!</h2>
+          <h2>Hora do banho e tosa!</h2>
           <div class="beautyimg">
             <img src="img/banho dog amarelo.png" alt="" />
-            <p>Em breve uma seção exclusiva para você agendar o banho do seu melhor amigo!</p>
-            <button style="background-color: #015a06;" type="button" class="btn btn-primary m-1 icon-link-hover "
-              data-bs-toggle="modal" data-bs-target="#botaoBanho">
-              Agendar
-            </button>
           </div>
+            <p>Em breve uma seção exclusiva para você agendar o banho do seu melhor amigo!</p>
+            <div class="fixarBtn">
+              <button style="background-color: #015a06;" type="button" class="btn btn-primary m-1 icon-link-hover "
+                data-bs-toggle="modal" data-bs-target="#botaoBanho">
+                Agendar
+              </button>
+            </div>
+          
         </section>
         <!-- card saúde -->
         <section class="cards">
@@ -68,10 +76,12 @@
             <img src="img/gato-vet.jpg" alt="" />
           </div>
           <p>Conheça os nossos planos e instalações de atendimento clínico e cirúrgico!</p>
-          <button style="background-color: #015a06;" type="button" class="btn btn-primary m-1 " data-bs-toggle="modal"
-            data-bs-target="#botaoSaude">
-            Agendar
-          </button>
+          <div class="fixarBtn">
+            <button style="background-color: #015a06;" type="button" class="btn btn-primary m-1 " data-bs-toggle="modal"
+              data-bs-target="#botaoSaude">
+              Agendar
+            </button>
+          </div>
         </section>
       </div>
       <!-- Modal banho e tosa-->
@@ -87,8 +97,8 @@
                 <form class="d-flex flex-column gap-1">
                   <label for="especie">Qual a espécie?</label>
                   <select name="select" id="especie">
-                    <option value="gato">Felina</option>
-                    <option value="cao">Canina</option>
+                    <option value="Felina">Felina</option>
+                    <option value="Canina">Canina</option>
                   </select>
                   <label for="diaBanho">Escolha o dia do banho</label>
                   <input type="date" id="diaBanho">
@@ -100,7 +110,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              <button style="background-color: #015a06;" type="button" class="btn btn-primary">Agendar</button>
+              <button id="btnBanho" style="background-color: #015a06;" type="button" class="btn btn-primary">Agendar</button>
             </div>
           </div>
         </div>
@@ -117,9 +127,9 @@
               <div>
                 <form class="d-flex flex-column gap-1">
                   <label for="especie">Qual a espécie?</label>
-                  <select name="select" id="especie">
-                    <option value="gato">Felina</option>
-                    <option value="cao">Canina</option>
+                  <select name="select" id="especie1">
+                    <option value="Felina">Felina</option>
+                    <option value="Canina">Canina</option>
                   </select>
                   <label for="diaSaude">Escolha o dia da consulta</label>
                   <input type="date" id="diaSaude">
@@ -131,7 +141,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              <button style="background-color: #015a06;" type="button" class="btn btn-primary">Agendar</button>
+              <button id="btnSaude" style="background-color: #015a06;" type="button" class="btn btn-primary">Agendar</button>
             </div>
           </div>
         </div>
@@ -166,6 +176,9 @@
   </script>
 
 
+  <script src="JS/jquery-3.7.1.js"></script>
+  <script src="JS/preload.js"></script>
+  <script src="JS/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>

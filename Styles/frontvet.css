@@ -9,9 +9,11 @@
 .cards {
    width: 40%;
    text-align: center;
-
+   min-width: 320px;
    background-color: #9ccbda;
    border-radius: 20px;
+   margin: 5px;
+   margin-bottom: 60px;
 }
 
 .cards img {
@@ -29,6 +31,12 @@ main p {
    color: #015a06;
    padding: 10px;
    font-weight: 550;
+}
+
+.cards .fixarBtn button{
+   position: relative;
+   bottom: 0px;
+   
 }
 
 

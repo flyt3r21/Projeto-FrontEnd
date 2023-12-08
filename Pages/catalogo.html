@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Catálogo</title>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-   <link rel="stylesheet" href="../Styles/catalogo.css">
-   <link rel="shortcut icon" href="../img/favicon_front_vet-removebg-preview.png" type="image/x-icon">
-</head>
-<body>
-   <div id="page">
-      <header>
-         <div class="logo">
-           <a href="../index.html"><img src="../img/logo_front_vet-removebg-preview.png" alt="logo front vet" /></a>
-         </div>
-         <nav class="menuPc">
-           <ul>
-             <li><a href="../index.html">Home</a></li>
-             <li><a href="../Pages/login.html">Login</a></li>
-             <li><a href="../Pages/cadastro.html">Cadastre-se</a></li>
-             <li><a href="../Pages/catalogo.html">Catálogo</a></li>
-             <li><a href="../Pages/sobre.html">Sobre</a></li>
-             <li><a href="../Pages/carrinho.html">Carrinho</a></li>
-           </ul>
-         </nav>
-       </header>
 
-       <div class="menuIcon" onclick="dropdown()">
-        <img src="../img/menuIcon.svg" alt="" class="imagem menu hamburguer">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../Styles/catalogo.css">
+  <link rel="shortcut icon" href="../img/favicon_front_vet-removebg-preview.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <div class="preloader" id="preloader">
+    <div class="loader" id="loader"></div>
+  </div>
+
+  <div id="page">
+    <header>
+      <div class="logo">
+        <a href="../index.html"><img src="../img/logo_front_vet-removebg-preview.png" alt="logo front vet" /></a>
       </div>
-  
-      <nav id="menuCel">
+      <nav class="menuPc">
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../Pages/login.html">Login</a></li>
@@ -40,170 +32,196 @@
           <li><a href="../Pages/carrinho.html">Carrinho</a></li>
         </ul>
       </nav>
+    </header>
 
-       <main>
-         <section id="cartasProdutos" class="d-flex gap-5 justify-content-center m-1 flex-wrap">
-            <!-- Casinha card -->
-            <div class="card" style="width: 18rem;">
-               <img src="../img/casinha de cachorro.png" class="card-img-top" alt="casinha de cachorro vermelha">
-               <div class="card-body">
-                 <h5 class="card-title text-center fw-bold">Casinha de cachorro</h5>
-                 <p class="card-text mb-5">Paredes madeira de pínus(Pinheiro Americano) 1cm de espessura, pintura emborrachada, exceto o verniz.
-                  Estrutura madeira pínus 2,5cm espessura
-                  Assoalho madeira pínus 1cm espessura, pintada na cor chumbo
-                  Telhado 100% ecológico.</p>
-                  <div id="botaoCentro">
-                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCasinha">
-                        Ver Mais
-                      </button>
-                  </div>
-               </div>
-             </div>
+    <div class="menuIcon" onclick="dropdown()">
+      <img src="../img/menuIcon.svg" alt="" class="imagem menu hamburguer">
+    </div>
 
-             <!-- Modal Casinha -->
-             <div class="modal fade" id="modalCasinha" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-               <div class="modal-dialog">
-                 <div class="modal-content">
-                   <div class="modal-header">
-                     <h1 class="modal-title fs-5" id="exampleModalLabel">Casinha Vermelha</h1>
-                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                   </div>
-                   <div class="modal-body">
-                     <img class="w-100" src="../img/casinha de cachorro.png" alt="casinha de cachorro">
-                     <p>Casinha de excelente qualidade, seu telhado é composto 70% por material pet e 30% de alumínio. Essa junção de materiais faz com que o telhado se torne térmico, e praticamente inquebrável.</p>
-                     <p id="preco" class="fw-bold">R$ 98</p>
-                   </div>
-                   <div class="modal-footer">
-                     
-                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                     <button type="button" class="btn btn-primary">Comprar</button>
-                   </div>
-                 </div>
-               </div>
-             </div>
+    <nav id="menuCel">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Pages/login.html">Login</a></li>
+        <li><a href="../Pages/cadastro.html">Cadastre-se</a></li>
+        <li><a href="../Pages/catalogo.html">Catálogo</a></li>
+        <li><a href="../Pages/sobre.html">Sobre</a></li>
+        <li><a href="../Pages/carrinho.html">Carrinho</a></li>
+      </ul>
+    </nav>
 
-             <!-- Coleira card -->
-             <div class="card" style="width: 18rem;">
-               <img src="../img/coleira verde.jfif" class="card-img-top" alt="coleira verde">
-               <div class="card-body">
-                 <h5 class="card-title text-center fw-bold">Coleira Peitoral</h5>
-                 <p class="card-text">A coleira personalizada número 1 da FrontVet. Ela é básica e possui combinações de cores que encantam à todos. É uma coleira leve, forte, em couro legítimo e feita para durar!</p>
-                  <div id="botaoCentro">
-                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalColeira">
-                        Ver Mais
-                      </button>
-                  </div>
-               </div>
-             </div>
+    <main>
+      <section id="cartasProdutos" class="d-flex gap-5 justify-content-center m-1 flex-wrap">
+        <!-- Casinha card -->
+        <div class="card" style="width: 18rem;">
+          <img src="../img/casinha de cachorro.png" class="card-img-top" alt="casinha de cachorro vermelha">
+          <div class="card-body">
+            <h5 class="card-title text-center fw-bold">Casinha de cachorro</h5>
+            <p class="card-text mb-5">Paredes madeira de pínus(Pinheiro Americano) 1cm de espessura, pintura
+              emborrachada, exceto o verniz.
+              Estrutura madeira pínus 2,5cm espessura
+              Assoalho madeira pínus 1cm espessura, pintada na cor chumbo
+              Telhado 100% ecológico.</p>
+            <div id="botaoCentro">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCasinha">
+                Ver Mais
+              </button>
+            </div>
+          </div>
+        </div>
 
-             <!-- Modal Coleira -->
-             <div class="modal fade" id="modalColeira" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-               <div class="modal-dialog">
-                 <div class="modal-content">
-                   <div class="modal-header">
-                     <h1 class="modal-title fs-5" id="exampleModalLabel">Coleira Peitoral</h1>
-                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                   </div>
-                   <div class="modal-body">
-                     <img class="w-100" src="../img/peitoral pitbull.jpg" alt="coleira no pitbull">
-                     <p>Apresentamos a Coleira Atena. A incomparável coleira número 1 da FrontVet. Esta coleira é uma opção clássica e elegante feita de couro nobre, que certamente encantará você e o seu amado pet.</p>
-                     <p id="preco" class="fw-bold">R$ 120</p>
-                   </div>
-                   <div class="modal-footer">
-                     
-                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                     <button type="button" class="btn btn-primary">Comprar</button>
-                   </div>
-                 </div>
-               </div>
-             </div>
+        <!-- Modal Casinha -->
+        <div class="modal fade" id="modalCasinha" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Casinha Vermelha</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img class="w-100" src="../img/casinha de cachorro.png" alt="casinha de cachorro">
+                <p>Casinha de excelente qualidade, seu telhado é composto 70% por material pet e 30% de alumínio. Essa
+                  junção de materiais faz com que o telhado se torne térmico, e praticamente inquebrável.</p>
+                <p id="preco" class="fw-bold">R$ 98</p>
+              </div>
+              <div class="modal-footer">
 
-             <!-- Brinquedo card -->
-             <div class="card" style="width: 18rem;">
-               <img src="../img/brinquedos para cachorro.jfif" class="card-img-top" alt="Brinquedos dog">
-               <div class="card-body">
-                 <h5 class="card-title text-center fw-bold">Brinquedo</h5>
-                 <p class="card-text">Brinquedos são muito importantes para o desenvolvimento cognitivo e entretenimento do seu amiguinho. Nossos brinquedos são fabricados em material super resistente e atóxico! </p>
-                  <div id="botaoCentro">
-                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBrinquedo">
-                        Ver Mais
-                      </button>
-                  </div>
-               </div>
-             </div>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-             <!-- Modal Brinquedo -->
-             <div class="modal fade" id="modalBrinquedo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-               <div class="modal-dialog">
-                 <div class="modal-content">
-                   <div class="modal-header">
-                     <h1 class="modal-title fs-5" id="exampleModalLabel">Mordedor Brinquedo</h1>
-                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                   </div>
-                   <div class="modal-body">
-                     <img class="w-100" src="../img/mordedor-filhote.jpg" alt="coleira no pitbull">
-                     <p>Estimule o desenvolvimento e fortalecimento dos dentes do seu cão enquanto ele se diverte!, Todo dono de cão sabe que os nossos amigos adoram brincar!</p>
-                     <p id="preco" class="fw-bold">R$ 20</p>
-                   </div>
-                   <div class="modal-footer">
-                     
-                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                     <button type="button" class="btn btn-primary">Comprar</button>
-                   </div>
-                 </div>
-               </div>
-             </div>
+        <!-- Coleira card -->
+        <div class="card" style="width: 18rem;">
+          <img src="../img/coleira verde.jfif" class="card-img-top" alt="coleira verde">
+          <div class="card-body">
+            <h5 class="card-title text-center fw-bold">Coleira Peitoral</h5>
+            <p class="card-text">A coleira personalizada número 1 da FrontVet. Ela é básica e possui combinações de
+              cores que encantam à todos. É uma coleira leve, forte, em couro legítimo e feita para durar!</p>
+            <div id="botaoCentro">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalColeira">
+                Ver Mais
+              </button>
+            </div>
+          </div>
+        </div>
 
-             <!-- Ração card -->
+        <!-- Modal Coleira -->
+        <div class="modal fade" id="modalColeira" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Coleira Peitoral</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img class="w-100" src="../img/peitoral pitbull.jpg" alt="coleira no pitbull">
+                <p>Apresentamos a Coleira Atena. A incomparável coleira número 1 da FrontVet. Esta coleira é uma opção
+                  clássica e elegante feita de couro nobre, que certamente encantará você e o seu amado pet.</p>
+                <p id="preco" class="fw-bold">R$ 120</p>
+              </div>
+              <div class="modal-footer">
 
-             <div class="card" style="width: 18rem;">
-               <img src="../img/ração golden senior.jpg" class="card-img-top" alt="Brinquedos dog">
-               <div class="card-body">
-                 <h5 class="card-title text-center fw-bold">Alimentação</h5>
-                 <p class="card-text">A escolha de uma boa alimentação é um fator determinante para o desenvolvimento e manutenção da saúde do seu amigo. Aqui você esncontra as melhores opções do mercado! </p>
-                  <div id="botaoCentro">
-                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRacao">
-                        Ver Mais
-                      </button>
-                  </div>
-               </div>
-             </div>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-             <!-- Modal Ração -->
-             <div class="modal fade" id="modalRacao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-               <div class="modal-dialog">
-                 <div class="modal-content">
-                   <div class="modal-header">
-                     <h1 class="modal-title fs-5" id="exampleModalLabel">Ração Golden Senior</h1>
-                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                   </div>
-                   <div class="modal-body">
-                     <img class="w-100" src="../img/ração golden senior.jpg" alt="coleira no pitbull">
-                     <p>Ingredientes: Farinha de vísceras de frango, farinha de carne e ossos de bovino, grão de milho*, quirera de arroz, polpa desidratada de beterraba, farelo de arroz desengordurado, gordura de frango,</p>
-                     <p id="preco" class="fw-bold">R$ 200</p>
-                   </div>
-                   <div class="modal-footer">
-                     
-                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                     <button type="button" class="btn btn-primary">Comprar</button>
-                   </div>
-                 </div>
-               </div>
-             </div>
+        <!-- Brinquedo card -->
+        <div class="card" style="width: 18rem;">
+          <img src="../img/brinquedos para cachorro.jfif" class="card-img-top" alt="Brinquedos dog">
+          <div class="card-body">
+            <h5 class="card-title text-center fw-bold">Brinquedo</h5>
+            <p class="card-text">Brinquedos são muito importantes para o desenvolvimento cognitivo e entretenimento do
+              seu amiguinho. Nossos brinquedos são fabricados em material super resistente e atóxico! </p>
+            <div id="botaoCentro">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBrinquedo">
+                Ver Mais
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Brinquedo -->
+        <div class="modal fade" id="modalBrinquedo" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Mordedor Brinquedo</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img class="w-100" src="../img/mordedor-filhote.jpg" alt="coleira no pitbull">
+                <p>Estimule o desenvolvimento e fortalecimento dos dentes do seu cão enquanto ele se diverte!, Todo dono
+                  de cão sabe que os nossos amigos adoram brincar!</p>
+                <p id="preco" class="fw-bold">R$ 20</p>
+              </div>
+              <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ração card -->
+
+        <div class="card" style="width: 18rem;">
+          <img src="../img/ração golden senior.jpg" class="card-img-top" alt="Brinquedos dog">
+          <div class="card-body">
+            <h5 class="card-title text-center fw-bold">Alimentação</h5>
+            <p class="card-text">A escolha de uma boa alimentação é um fator determinante para o desenvolvimento e
+              manutenção da saúde do seu amigo. Aqui você esncontra as melhores opções do mercado! </p>
+            <div id="botaoCentro">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRacao">
+                Ver Mais
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Ração -->
+        <div class="modal fade" id="modalRacao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Ração Golden Senior</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img class="w-100" src="../img/ração golden senior.jpg" alt="coleira no pitbull">
+                <p>Ingredientes: Farinha de vísceras de frango, farinha de carne e ossos de bovino, grão de milho*,
+                  quirera de arroz, polpa desidratada de beterraba, farelo de arroz desengordurado, gordura de frango,
+                </p>
+                <p id="preco" class="fw-bold">R$ 200</p>
+              </div>
+              <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
-         </section>
+      </section>
 
-       </main>
+    </main>
 
 
-       <footer>
-         <p>@2023 Todos os direitos reservados</p>
-       </footer>
-      
-   </div>
+    <footer>
+      <p>@2023 Todos os direitos reservados</p>
+    </footer>
 
-   <script>
+  </div>
+
+  <script>
     function dropdown() {
       if (menuCel.style.display == "flex") {
         menuCel.style.display = "none"
@@ -214,9 +232,16 @@
   </script>
 
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  <script src="../JS/preload.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
