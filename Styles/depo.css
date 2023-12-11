@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#page {
+    background-image: url(../img/dog_and_cat_pattern-11.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+html {
+    background-image: url(../img/dog_and_cat_pattern-11.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+.circulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#61a2ba 60%, #80aebe, #9cc9da);
+    clip-path: circle(40% at right 900px);
+    z-index: 1;
+}
+
+.bernesse {
+    width: 300px;
+    position: absolute;
+    right: 250px;
+    bottom: 0px;
+    z-index: 2;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #9ccadace 50%, #b5ebec8c);
+}
+
+.logo {
+    margin-left: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    color: #015a06;
+    font-weight: bold;
+}
+
+nav ul li a:after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.589);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+nav ul li a:hover:after {
+    width: 100%;
+}
+
+.caixaDep {
+    padding: 20px;
+    background-image: linear-gradient(to bottom, #9ccadace 50%, #b5ebec8c);
+    margin: 5px;
+    border-radius: 10px;
+}
+
+#menuCel {
+    display: none;
+}
+
+.menuIcon {
+    cursor: pointer;
+    display: none;
+}
+
+.redes {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    bottom: 300px;
+    gap: 20px;
+ }
+ 
+ .redes img {
+    cursor: pointer;
+ }
+
+footer {
+    line-height: 4rem;
+    height: 4rem;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    color: #3f6c7c;
+    font-family: sans-serif;
+    color: #015a06;
+    background-image: linear-gradient(to bottom, #9ccadace 50%, #b5ebec8c);
+}
+
+@media screen and (max-width: 1200px) {
+    .bernesse {
+        display: none;
+    }
+
+    .circulo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .circulo {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        display: none;
+    }
+
+    .menuIcon {
+        display: flex;
+        background-image: linear-gradient(to bottom, #9ccadace 50%, #b5ebec8c);
+
+    }
+}
+
+@media screen and (min-width: 300px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+
+/* CSS para o pre carregamento */
+.preloader {
+    background-image: linear-gradient(to bottom, #9ccbda 50%, #b5ebec);
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: spinz 1.35s ease-in-out infinite;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.loader {
+    border: 16px solid #efeee8;
+    border-top: 16px solid #015a06;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.35s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+}
+
+@keyframes spinz {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
